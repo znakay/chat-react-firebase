@@ -17,7 +17,9 @@ const Header = () => {
               Log Out
             </Button>
           ) : (
-            ''
+            <Button variant="primary" className="button button_header">
+              Log In
+            </Button>
           )}
         </Container>
       </Navbar>
