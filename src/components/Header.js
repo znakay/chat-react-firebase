@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navbar, Container, Button } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Context } from '..';
 
 const Header = () => {
-  const user = false;
+  const { auth } = useContext(Context);
+  const [user] = useAuthState(auth);
 
   return (
     <header>
@@ -10,13 +13,11 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="">Navbar</Navbar.Brand>
           {user ? (
-            <Button variant="primary" className="button button_header">
-              Log In
-            </Button>
-          ) : (
-            <Button variant="primary" className="button button_header">
+            <Button onClick={auth.signOut()} variant="primary" className="button button_header">
               Log Out
             </Button>
+          ) : (
+            ''
           )}
         </Container>
       </Navbar>

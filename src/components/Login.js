@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { Context } from '..';
+import firebase from 'firebase';
 
 const Login = () => {
+  const { auth } = useContext(Context);
+  
+  const loginWithGoogle = async () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const { user } = await auth.signInWithPopup(provider);
+  };
+
   return (
     <div className="form__wrapper">
       <Form>
@@ -15,14 +24,13 @@ const Login = () => {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-        <Button variant="secondary" type="submit">
-          Log in by Google
-        </Button>
-
         <Button variant="primary" type="submit">
           Submit
         </Button>
       </Form>
+      <Button onClick={loginWithGoogle} variant="secondary" type="submit">
+          Log in by Google
+        </Button>
     </div>
   );
 };
