@@ -14,7 +14,7 @@ const Header = () => {
               Log In
             </Button>
           ) : (
-            <Button variant="primary" lassName="button button_header">
+            <Button variant="primary" className="button button_header">
               Log Out
             </Button>
           )}
