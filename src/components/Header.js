@@ -11,14 +11,14 @@ const Header = () => {
     <header>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="">Navbar</Navbar.Brand>
+          <Navbar.Brand href="">Live Chat</Navbar.Brand>
           {user ? (
-            <Button onClick={auth.signOut()} variant="primary" className="button button_header">
-              Log Out
+            <Button onClick={() => auth.signOut()} variant="primary" className="button button_header">
+              Sign Out
             </Button>
           ) : (
             <Button variant="primary" className="button button_header">
-              Log In
+              Sign up
             </Button>
           )}
         </Container>
