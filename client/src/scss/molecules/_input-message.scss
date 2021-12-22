@@ -1,0 +1,19 @@
+.input-message {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 60px;
+
+  &__field {
+    display: block;
+    padding: 5px 15px;
+    width: 80%;
+    resize: none;
+    outline: none;
+  }
+
+  &__send {
+    width: calc(20% - 20px);
+  }
+}

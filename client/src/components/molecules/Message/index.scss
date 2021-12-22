@@ -1,0 +1,20 @@
+.message {
+  display: flex;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+
+  &__connected {
+    padding: 5px 10px; 
+    background-color: lawngreen;
+    border: 1px solid lawngreen;
+    border-radius: 10px;
+  }
+
+
+  &__disconnected {
+    padding: 5px 10px; 
+    background-color: rgb(252, 101, 0);
+    border: 1px solid rgb(252, 101, 0);
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,13 @@
+.chat {
+  margin: 80px;
+
+  &__field {
+    padding: 15px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    border: 1px solid #000000;
+    outline: none;
+    overflow-y: auto;
+  }
+}

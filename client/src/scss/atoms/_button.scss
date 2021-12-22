@@ -1,0 +1,50 @@
+.button {
+  display: block;
+  padding: 5px 10px;
+  min-width: 85px;
+  min-height: 60px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #d1d1d1;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &_submit,
+  &_google {
+    background-color: #00c7b3;
+
+    &:hover {
+      background-color: #03dac6;
+    }
+  }
+
+  &_sign-up {
+    width: 100%;
+    height: 50px;
+    background-color: #ffb6c1;
+
+    &:hover {
+      background-color: #ff90a0;
+    }
+  }
+
+  &_sign-out {
+    &:hover {
+      background-color: red;
+      color: #ffffff;
+    }
+  }
+
+  &_send {
+    height: 100%;
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primary-light;
+    }
+  }
+}

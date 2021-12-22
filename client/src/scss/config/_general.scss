@@ -1,0 +1,33 @@
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    color: #000000;
+  }
+}

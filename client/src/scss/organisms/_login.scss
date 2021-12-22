@@ -1,0 +1,11 @@
+.login {
+  position: relative;
+  height: calc(100vh - 68px);
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
