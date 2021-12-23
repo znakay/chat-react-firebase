@@ -14,19 +14,17 @@ const Login = () => {
 
   const loginWithPassword = async (e) => {
     e.preventDefault();
-    const provider = new firebase.auth().signInWithEmailAndPassword(email, password);
-    const user = await provider;
-    console.group('sign in with pass');
-    console.log(user.user);
-    console.groupEnd();
+    const provider = new firebase.auth().signInWithEmailAndPassword(
+      email,
+      password
+    );
+    
+    await provider;
   };
 
   const loginWithGoogle = async () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    const { user } = await auth.signInWithPopup(provider);
-    console.group('sign in with google');
-    console.log(user);
-    console.groupEnd();
+    await auth.signInWithPopup(provider);
   };
 
   return (
@@ -50,11 +48,18 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <button className="button button_submit" type="submit" onClick={loginWithPassword}>
+                <button
+                  className="button button_submit"
+                  type="submit"
+                  onClick={loginWithPassword}
+                >
                   Sign in
                 </button>
               </form>
-              <button className="button button_google" onClick={loginWithGoogle.bind(null)}>
+              <button
+                className="button button_google"
+                onClick={loginWithGoogle.bind(null)}
+              >
                 Sign in with Google
               </button>
               <Link to={SIGN_UP_ROUTE} className="button button_sign-up">

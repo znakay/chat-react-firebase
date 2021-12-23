@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import AppRoute from './AppRoute';
@@ -13,7 +13,6 @@ import { Header } from './components/organisms';
 const App = () => {
   const { auth } = useContext(Context);
   const loader = useAuthState(auth)[1];
-  // const [user, loader, error] = useAuthState(auth);
 
   if (loader) {
     return <Loader />;

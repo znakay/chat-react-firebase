@@ -27,6 +27,16 @@ wss.on('connection', (ws) => {
       case 'message':
         broadcast(inputMessage);
         break;
+      case 'close': {
+        const message = {
+          event: 'close',
+          id: client.id,
+          username: client.username
+        }
+  
+        broadcast(message);
+        break;
+      }
       default:
         break;
     }
